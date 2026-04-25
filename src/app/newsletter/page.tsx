@@ -4,7 +4,7 @@ import AnimateIn from "@/components/AnimateIn";
 import SubscribeForm from "@/components/SubscribeForm";
 
 export const metadata: Metadata = {
-  title: "Raw Notes · Newsletter",
+  title: "Raw Notes | Newsletter",
   description:
     "Unfiltered thinking on business, marketing, and human nature. Subscribe to Raw Notes by Hammad Hassan.",
 };

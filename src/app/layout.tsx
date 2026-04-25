@@ -23,7 +23,7 @@ const sourceSerif = Source_Serif_4({
 export const metadata: Metadata = {
   title: {
     default: "Hammad Hassan. Builder. Founder. Writer.",
-    template: "%s · Hammad Hassan",
+    template: "%s | Hammad Hassan",
   },
   description:
     "Raw notes on business, entrepreneurship, marketing, and human behavior.",

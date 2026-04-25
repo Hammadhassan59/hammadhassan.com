@@ -15,7 +15,7 @@ export default function Home() {
           {/* Left */}
           <div className="hero-enter">
             <p className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">
-              Hammad Hassan. Founder &amp; Writer
+              Hammad Hassan | Founder &amp; Writer
             </p>
             <h1 className="mt-4 text-6xl font-semibold leading-[1.05] tracking-tighter md:text-8xl">
               RAW
