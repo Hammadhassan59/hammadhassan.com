@@ -1,13 +1,10 @@
 import Link from "next/link";
-import { articles } from "@/lib/articles";
 import { newsletters } from "@/lib/newsletters";
-import ArticleCard from "@/components/ArticleCard";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import AnimateIn from "@/components/AnimateIn";
 import SubscribeForm from "@/components/SubscribeForm";
 
 export default function Home() {
-  const featured = articles.slice(0, 3);
   const latestIssue = newsletters[0];
 
   return (
@@ -94,28 +91,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Latest Articles */}
-      <AnimateIn className="border-t border-border pt-10 pb-14">
-        <div className="flex items-center justify-between">
-          <h2 className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">
-            Latest
-          </h2>
-          <Link
-            href="/articles"
-            className="font-mono text-xs text-muted transition-colors hover:text-foreground"
-          >
-            View all &rarr;
-          </Link>
-        </div>
-        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
-          {featured.map((article, i) => (
-            <AnimateIn key={article.slug} delay={i * 100}>
-              <ArticleCard article={article} />
-            </AnimateIn>
-          ))}
-        </div>
-      </AnimateIn>
 
       {/* What I Write About */}
       <AnimateIn className="border-t border-border pt-10 pb-14">

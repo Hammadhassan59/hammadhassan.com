@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { articles } from "@/lib/articles";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import AnimateIn from "@/components/AnimateIn";
 
@@ -191,44 +189,8 @@ export default function BooksPage() {
         </div>
       </AnimateIn>
 
-      {/* Related articles — connect books to your writing */}
-      <AnimateIn className="border-t border-border pt-12 pb-14">
-        <div className="flex items-center justify-between">
-          <h2 className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">
-            My writing on these topics
-          </h2>
-          <Link
-            href="/articles"
-            className="font-mono text-xs text-muted transition-colors hover:text-foreground"
-          >
-            All articles &rarr;
-          </Link>
-        </div>
-        <div className="mt-8 divide-y divide-border border-y border-border">
-          {articles.slice(0, 4).map((article) => (
-            <Link
-              key={article.slug}
-              href={`/articles/${article.slug}`}
-              className="group flex items-center justify-between py-5 transition-colors hover:bg-card md:px-6"
-            >
-              <div className="flex items-center gap-4 pr-4">
-                <span className="hidden shrink-0 border border-border px-3 py-1 font-mono text-xs group-hover:border-foreground md:inline-block">
-                  {article.category}
-                </span>
-                <span className="text-sm font-medium tracking-tight md:text-base">
-                  {article.title}
-                </span>
-              </div>
-              <span className="shrink-0 font-mono text-xs text-muted">
-                {article.readingTime}
-              </span>
-            </Link>
-          ))}
-        </div>
-      </AnimateIn>
-
       {/* CTA */}
-      <AnimateIn className="pb-14">
+      <AnimateIn className="border-t border-border pt-12 pb-14">
         <NewsletterSignup />
       </AnimateIn>
     </div>

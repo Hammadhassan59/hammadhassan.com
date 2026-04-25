@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { articles } from "@/lib/articles";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import AnimateIn from "@/components/AnimateIn";
 
@@ -11,8 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const featuredArticles = articles.slice(0, 4);
-
   return (
     <div className="mx-auto max-w-[1200px] px-6">
       {/* Hero with photo */}
@@ -176,52 +172,8 @@ export default function AboutPage() {
         </div>
       </AnimateIn>
 
-      {/* Start reading */}
-      <AnimateIn className="border-t border-border pt-12 pb-14">
-        <div className="flex items-center justify-between">
-          <h2 className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">
-            Start here
-          </h2>
-          <Link
-            href="/articles"
-            className="font-mono text-xs text-muted transition-colors hover:text-foreground"
-          >
-            All articles &rarr;
-          </Link>
-        </div>
-        <div className="mt-8 divide-y divide-border border-y border-border">
-          {featuredArticles.map((article) => (
-            <Link
-              key={article.slug}
-              href={`/articles/${article.slug}`}
-              className="group grid grid-cols-1 gap-2 py-6 transition-colors hover:bg-card md:grid-cols-[1fr_auto] md:items-center md:gap-8 md:px-6"
-            >
-              <div>
-                <div className="flex items-center gap-3">
-                  <span className="border border-border px-3 py-1 font-mono text-xs group-hover:border-foreground">
-                    {article.category}
-                  </span>
-                  <span className="font-mono text-xs text-muted">
-                    {article.readingTime}
-                  </span>
-                </div>
-                <h3 className="mt-3 text-lg font-semibold tracking-tight md:text-xl">
-                  {article.title}
-                </h3>
-                <p className="mt-2 text-sm text-muted leading-relaxed">
-                  {article.excerpt}
-                </p>
-              </div>
-              <span className="hidden font-mono text-xs text-muted md:block">
-                {article.date}
-              </span>
-            </Link>
-          ))}
-        </div>
-      </AnimateIn>
-
       {/* CTA */}
-      <AnimateIn className="pb-14">
+      <AnimateIn className="border-t border-border pt-12 pb-14">
         <NewsletterSignup />
       </AnimateIn>
     </div>

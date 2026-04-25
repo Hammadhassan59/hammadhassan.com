@@ -18,8 +18,8 @@ export default function Footer() {
               Navigate
             </p>
             <div className="mt-4 flex flex-col gap-3">
-              <Link href="/articles" className="text-sm text-background/60 transition-colors hover:text-background">
-                Articles
+              <Link href="/books" className="text-sm text-background/60 transition-colors hover:text-background">
+                Books
               </Link>
               <Link href="/newsletter" className="text-sm text-background/60 transition-colors hover:text-background">
                 Newsletter
