@@ -15,7 +15,7 @@ export default function Home() {
           {/* Left */}
           <div className="hero-enter">
             <p className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">
-              Hammad Hassan — Founder &amp; Writer
+              Hammad Hassan. Founder &amp; Writer
             </p>
             <h1 className="mt-4 text-6xl font-semibold leading-[1.05] tracking-tighter md:text-8xl">
               RAW
@@ -27,7 +27,7 @@ export default function Home() {
               style={{ fontFamily: "var(--font-serif)" }}
             >
               Essays on marketing, human behavior, and the messy truth
-              about building businesses — written by a founder who&apos;s
+              about building businesses. Written by a founder who&apos;s
               still in the arena, not commentating from the sidelines.
             </p>
 
@@ -45,7 +45,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Right — latest issue preview */}
+          {/* Right: latest issue preview */}
           <div className="lg:pl-8 animate-fade-up" style={{ animationDelay: "300ms" }}>
             <div className="border border-border bg-card p-8 md:p-10">
               <p className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">

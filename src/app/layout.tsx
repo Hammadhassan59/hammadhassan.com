@@ -22,13 +22,13 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata: Metadata = {
   title: {
-    default: "Hammad Hassan — Builder. Founder. Writer.",
-    template: "%s — Hammad Hassan",
+    default: "Hammad Hassan. Builder. Founder. Writer.",
+    template: "%s · Hammad Hassan",
   },
   description:
     "Raw notes on business, entrepreneurship, marketing, and human behavior.",
   openGraph: {
-    title: "Hammad Hassan — Builder. Founder. Writer.",
+    title: "Hammad Hassan. Builder. Founder. Writer.",
     description:
       "Raw notes on business, entrepreneurship, marketing, and human behavior.",
     url: "https://hammadhassan.com",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hammad Hassan — Builder. Founder. Writer.",
+    title: "Hammad Hassan. Builder. Founder. Writer.",
     description:
       "Raw notes on business, entrepreneurship, marketing, and human behavior.",
   },

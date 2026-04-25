@@ -37,7 +37,7 @@ const books = [
     title: "Zero to One",
     author: "Peter Thiel",
     topic: "Business",
-    note: "How to think about building something genuinely new. Changed how I think about competition — specifically, why you should avoid it.",
+    note: "How to think about building something genuinely new. Changed how I think about competition. Specifically, why you should avoid it.",
     takeaway:
       "Competition is for losers. The best businesses create something so different that there's no one to compete with.",
   },
@@ -47,7 +47,7 @@ const books = [
     topic: "Human Behavior",
     note: "Mental models for thinking clearly about business, life, and everything in between. Dense, brilliant, and worth re-reading every year.",
     takeaway:
-      "Invert, always invert. Instead of asking how to succeed, ask how to fail — then avoid those things.",
+      "Invert, always invert. Instead of asking how to succeed, ask how to fail, then avoid those things.",
   },
   {
     title: "Obviously Awesome",
@@ -107,7 +107,7 @@ export default function BooksPage() {
             I read a lot. Most books give you one or two good ideas buried in
             300 pages of filler. These are the ones where I stopped
             highlighting because I&apos;d be highlighting the whole thing.
-            Each book below includes my one-line takeaway — the idea that
+            Each book below includes my one-line takeaway. The idea that
             stuck with me longest.
           </p>
         </div>
@@ -121,7 +121,7 @@ export default function BooksPage() {
             className="border-t border-border"
           >
             <div className="grid grid-cols-1 gap-6 py-10 md:grid-cols-[280px_1fr] md:gap-12">
-              {/* Left — book info */}
+              {/* Left: book info */}
               <div>
                 <span className="font-mono text-xs text-muted">
                   {String(i + 1).padStart(2, "0")}
@@ -135,7 +135,7 @@ export default function BooksPage() {
                 </span>
               </div>
 
-              {/* Right — why it matters */}
+              {/* Right: why it matters */}
               <div className="flex flex-col justify-center">
                 <p
                   className="text-[1.125rem] leading-[1.75] text-foreground/70"

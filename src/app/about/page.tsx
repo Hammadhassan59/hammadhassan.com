@@ -5,7 +5,7 @@ import AnimateIn from "@/components/AnimateIn";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Hammad Hassan — builder, founder, and writer sharing raw notes on business, marketing, and human behavior.",
+    "Hammad Hassan. Builder, founder, and writer sharing raw notes on business, marketing, and human behavior.",
 };
 
 export default function AboutPage() {
@@ -13,32 +13,20 @@ export default function AboutPage() {
     <div className="mx-auto max-w-[1200px] px-6">
       {/* Hero with photo */}
       <section className="pt-16 pb-14 md:pt-24 md:pb-20 hero-enter">
-        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-[1fr_300px]">
-          <div>
-            <p className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">
-              About
-            </p>
-            <h1 className="mt-4 text-5xl font-semibold leading-[1.1] tracking-tighter md:text-7xl lg:text-8xl">
-              I&apos;m Hammad.
-            </h1>
-            <p className="mt-6 text-xl leading-relaxed text-muted" style={{ fontFamily: "var(--font-serif)" }}>
-              Builder. Founder. Writer. I&apos;ve spent 7+ years starting
-              businesses and writing about what I learn — while I&apos;m still
-              in it.
-            </p>
-          </div>
-          {/* Photo placeholder — replace src with your real headshot */}
-          <div className="hidden md:block">
-            <div className="aspect-[3/4] w-full border border-border bg-foreground/5 flex items-end justify-center overflow-hidden">
-              <div className="flex flex-col items-center justify-center h-full w-full">
-                <span className="font-mono text-xs text-muted/40 uppercase tracking-wider">Your photo here</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">
+          About
+        </p>
+        <h1 className="mt-4 text-5xl font-semibold leading-[1.1] tracking-tighter md:text-7xl lg:text-8xl">
+          I&apos;m Hammad.
+        </h1>
+        <p className="mt-6 max-w-2xl text-xl leading-relaxed text-muted" style={{ fontFamily: "var(--font-serif)" }}>
+          Builder. Founder. Writer. I&apos;ve spent 7+ years starting
+          businesses and writing about what I learn while I&apos;m still
+          in it.
+        </p>
       </section>
 
-      {/* Credibility — what I've built */}
+      {/* Credibility: what I've built */}
       <AnimateIn className="border-t border-border pt-12 pb-14">
         <h2 className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">
           What I&apos;ve built
@@ -111,19 +99,19 @@ export default function AboutPage() {
             </p>
             <p>
               That became{" "}
-              <strong className="font-semibold text-foreground">Raw Notes</strong>{" "}
-              — a newsletter where I share the real stuff. The patterns, the
+              <strong className="font-semibold text-foreground">Raw Notes</strong>.
+              A newsletter where I share the real stuff. The patterns, the
               mistakes, the human side of making something from nothing.
             </p>
             <p>
-              I don&apos;t write on a schedule. I write when something clicks —
-              a pattern I noticed, a mistake I made, a truth about human
+              I don&apos;t write on a schedule. I write when something clicks.
+              A pattern I noticed, a mistake I made, a truth about human
               behavior that I can&apos;t stop thinking about. Then I send it to
               whoever is listening.
             </p>
             <p>
               If you&apos;re building something, trying to understand people,
-              or just trying to figure out how the world actually works — you
+              or just trying to figure out how the world actually works, you
               might find something useful here.
             </p>
           </div>

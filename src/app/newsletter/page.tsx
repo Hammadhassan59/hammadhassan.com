@@ -4,7 +4,7 @@ import AnimateIn from "@/components/AnimateIn";
 import SubscribeForm from "@/components/SubscribeForm";
 
 export const metadata: Metadata = {
-  title: "Raw Notes — Newsletter",
+  title: "Raw Notes · Newsletter",
   description:
     "Unfiltered thinking on business, marketing, and human nature. Subscribe to Raw Notes by Hammad Hassan.",
 };
@@ -15,10 +15,10 @@ export default function NewsletterPage() {
 
   return (
     <div className="mx-auto max-w-[1200px] px-6">
-      {/* Hero — conversion focused */}
+      {/* Hero: conversion focused */}
       <section className="pt-16 pb-14 md:pt-24 md:pb-20">
         <div className="grid grid-cols-1 items-end gap-12 lg:grid-cols-2">
-          {/* Left — pitch */}
+          {/* Left: pitch */}
           <div className="hero-enter">
             <p className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">
               A newsletter for founders
@@ -33,12 +33,12 @@ export default function NewsletterPage() {
               style={{ fontFamily: "var(--font-serif)" }}
             >
               I&apos;ve been starting businesses for over seven years. These are
-              the notes I took along the way — on marketing, human behavior, and
+              the notes I took along the way: on marketing, human behavior, and
               what it actually takes to build something that works.
             </p>
           </div>
 
-          {/* Right — signup */}
+          {/* Right: signup */}
           <div className="lg:pl-8 animate-fade-up" style={{ animationDelay: "300ms" }}>
             <div className="border border-border bg-card p-8 md:p-10">
               <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
@@ -76,7 +76,7 @@ export default function NewsletterPage() {
             {
               title: "Useful patterns",
               description:
-                "Patterns I've noticed about marketing, decision-making, people, and business — the kind of stuff that changes how you see things.",
+                "Patterns I've noticed about marketing, decision-making, people, and business. The kind of stuff that changes how you see things.",
             },
             {
               title: "No filler",
@@ -98,10 +98,10 @@ export default function NewsletterPage() {
         </div>
       </AnimateIn>
 
-      {/* Latest Issue — full readable sample */}
+      {/* Latest Issue: full readable sample */}
       <AnimateIn className="border-t border-border pt-12 pb-14">
         <h2 className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">
-          Latest Issue — Read it now
+          Latest Issue. Read it now.
         </h2>
         <div className="mt-8 border border-border bg-card p-8 md:p-12">
           <div className="mx-auto max-w-[700px]">
@@ -123,7 +123,7 @@ export default function NewsletterPage() {
               <p>
                 I spent the first two years of building saying yes to everything.
                 Every client request, every partnership pitch, every &ldquo;quick
-                call.&rdquo; I thought I was being smart — keeping options open,
+                call.&rdquo; I thought I was being smart. Keeping options open,
                 staying flexible, never missing a shot.
               </p>
               <p>
@@ -185,7 +185,7 @@ export default function NewsletterPage() {
         </div>
       </AnimateIn>
 
-      {/* Final CTA — minimal */}
+      {/* Final CTA: minimal */}
       <AnimateIn className="pb-14">
         <div className="border-t border-border pt-10 text-center">
           <p className="text-sm text-muted">

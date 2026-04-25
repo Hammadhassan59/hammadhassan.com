@@ -46,7 +46,7 @@ export const newsletters: Newsletter[] = [
     title: "The quiet power of being boring",
     date: "Jan 22, 2026",
     preview:
-      "The most successful founders I know are boring. Not boring people — boring operators. They do the same things, consistently, without drama.",
+      "The most successful founders I know are boring. Not boring people. Boring operators. They do the same things, consistently, without drama.",
   },
   {
     slug: "raw-notes-006",
