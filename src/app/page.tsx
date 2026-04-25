@@ -1,65 +1,196 @@
-import Image from "next/image";
+import Link from "next/link";
+import { articles } from "@/lib/articles";
+import { newsletters } from "@/lib/newsletters";
+import ArticleCard from "@/components/ArticleCard";
+import NewsletterSignup from "@/components/NewsletterSignup";
+import AnimateIn from "@/components/AnimateIn";
+import SubscribeForm from "@/components/SubscribeForm";
 
 export default function Home() {
+  const featured = articles.slice(0, 3);
+  const latestIssue = newsletters[0];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="mx-auto max-w-[1200px] px-6">
+      {/* Hero */}
+      <section className="pt-16 pb-12 md:pt-24 md:pb-16">
+        <div className="grid grid-cols-1 items-end gap-12 lg:grid-cols-2">
+          {/* Left */}
+          <div className="hero-enter">
+            <p className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">
+              Hammad Hassan — Founder &amp; Writer
+            </p>
+            <h1 className="mt-4 text-6xl font-semibold leading-[1.05] tracking-tighter md:text-8xl">
+              RAW
+              <br />
+              NOTES
+            </h1>
+            <p
+              className="mt-6 text-xl leading-relaxed text-muted"
+              style={{ fontFamily: "var(--font-serif)" }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              Essays on marketing, human behavior, and the messy truth
+              about building businesses — written by a founder who&apos;s
+              still in the arena, not commentating from the sidelines.
+            </p>
+
+            <p className="mt-8 font-mono text-xs text-muted">
+              Join founders who read Raw Notes.
+            </p>
+            <div className="mt-4">
+              <SubscribeForm
+                buttonText="Get Raw Notes"
+                placeholder="Your email address"
+              />
+            </div>
+            <p className="mt-3 font-mono text-xs text-muted/50">
+              No spam. No schedule. Just signal.
+            </p>
+          </div>
+
+          {/* Right — latest issue preview */}
+          <div className="lg:pl-8 animate-fade-up" style={{ animationDelay: "300ms" }}>
+            <div className="border border-border bg-card p-8 md:p-10">
+              <p className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">
+                Latest Issue
+              </p>
+              <h3 className="mt-4 text-2xl font-semibold leading-tight tracking-tight">
+                {latestIssue.title}
+              </h3>
+              <p className="mt-4 text-sm leading-relaxed text-muted">
+                Every yes costs you something. Most founders don&apos;t fail
+                because they couldn&apos;t find the right opportunity. They fail
+                because they couldn&apos;t say no to the wrong ones.
+              </p>
+              <div className="mt-6 flex items-center justify-between">
+                <span className="font-mono text-xs text-muted">
+                  {latestIssue.date}
+                </span>
+                <Link
+                  href="/newsletter"
+                  className="font-mono text-xs font-semibold transition-colors hover:text-muted"
+                >
+                  Read more &rarr;
+                </Link>
+              </div>
+            </div>
+
+            <div className="mt-4 divide-y divide-border border border-border bg-card">
+              {newsletters.slice(1, 4).map((issue) => (
+                <Link
+                  key={issue.slug}
+                  href="/newsletter"
+                  className="flex items-center justify-between px-8 py-4 transition-colors hover:bg-foreground hover:text-background"
+                >
+                  <span className="text-sm font-medium truncate pr-4">
+                    {issue.title}
+                  </span>
+                  <span className="shrink-0 font-mono text-xs opacity-50">
+                    {issue.date}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </section>
+
+      {/* Latest Articles */}
+      <AnimateIn className="border-t border-border pt-10 pb-14">
+        <div className="flex items-center justify-between">
+          <h2 className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">
+            Latest
+          </h2>
+          <Link
+            href="/articles"
+            className="font-mono text-xs text-muted transition-colors hover:text-foreground"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            View all &rarr;
+          </Link>
         </div>
-      </main>
+        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+          {featured.map((article, i) => (
+            <AnimateIn key={article.slug} delay={i * 100}>
+              <ArticleCard article={article} />
+            </AnimateIn>
+          ))}
+        </div>
+      </AnimateIn>
+
+      {/* What I Write About */}
+      <AnimateIn className="border-t border-border pt-10 pb-14">
+        <h2 className="font-mono text-xs font-semibold uppercase tracking-wider text-muted">
+          What I Write About
+        </h2>
+        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              title: "Business",
+              description:
+                "How businesses actually work when nobody's watching. Not the pitch deck version. The real one.",
+            },
+            {
+              title: "Marketing",
+              description:
+                "Why people pay attention. Why they buy. Why most marketing fails and the people doing it can't figure out why.",
+            },
+            {
+              title: "Human Behavior",
+              description:
+                "How people think, decide, and act. Especially when they're under pressure, scared, or don't realize they're being irrational.",
+            },
+            {
+              title: "Founder Lessons",
+              description:
+                "The stuff you only learn by doing it. Hiring the wrong person. Burning out quietly. Killing something you loved because the numbers said so.",
+            },
+          ].map((topic, i) => (
+            <AnimateIn key={topic.title} delay={i * 100}>
+              <div className="h-full border border-border bg-card p-8">
+                <h3 className="text-lg font-semibold tracking-tight">
+                  {topic.title}
+                </h3>
+                <p className="mt-3 text-sm text-muted leading-relaxed">
+                  {topic.description}
+                </p>
+              </div>
+            </AnimateIn>
+          ))}
+        </div>
+      </AnimateIn>
+
+      {/* About Teaser */}
+      <section className="border-t border-border py-14">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:items-center">
+          <div>
+            <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
+              I make things.
+              <br />
+              Then I write about it.
+            </h2>
+          </div>
+          <div>
+            <p className="text-muted leading-relaxed">
+              I start businesses and write about what I learn while I&apos;m
+              still in it. Not after the fact with a clean narrative. While
+              it&apos;s messy. While I&apos;m still figuring it out.
+            </p>
+            <div className="mt-6">
+              <Link
+                href="/about"
+                className="font-mono text-sm font-semibold transition-colors hover:text-muted"
+              >
+                More about me &rarr;
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter CTA */}
+      <AnimateIn className="pb-14">
+        <NewsletterSignup />
+      </AnimateIn>
     </div>
   );
 }
